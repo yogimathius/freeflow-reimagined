@@ -2,28 +2,30 @@
 
 Full-stack application with a NestJS backend and a Next.js frontend. The exact domain purpose is described in `MVP_REQUIREMENTS.md`, but appears to be a complete product with auth, database, and core logic.
 
-## Structure
+## Scope and Direction
+- Project path: `full-stack-apps/freeflow-reimagined`
+- Primary tech profile: Node.js/TypeScript or JavaScript
+- Audit date: `2026-02-08`
 
-- `backend/` - NestJS API + Prisma
-- `frontend/` - Next.js app
-- `docs/` - Documentation
-
-## Current Status
-
-- MVP requirements claim 90%+ completion.
-- Implementation not verified in this audit.
-- Operational estimate: **60%** (substantial scaffold, unverified runtime).
+## What Appears Implemented
+- Detected major components: `backend/`, `frontend/`
+- Source files contain API/controller routing signals
 
 ## API Endpoints
+- Controller bases detected:
+- `/health`
+- Controller method decorators detected: `6`
 
-- Not documented in this README. Check `backend/src` for controllers or GraphQL schema.
+## Testing Status
+- `backend` package has test scripts: `test`, `test:watch`, `test:cov`
+- `frontend` package has test scripts: `test`, `test:run`
+- This audit did not assume tests are passing unless explicitly re-run and captured in this session
 
-## Tests
-
-- Backend and frontend test scripts exist, but not run in this audit.
+## Operational Assessment
+- Estimated operational coverage: **54%**
+- Confidence level: **medium**
 
 ## Future Work
-
-- Validate authentication and core flows end-to-end.
-- Document API/GraphQL surface area.
-- Add CI and deployment docs.
+- Consolidate and document endpoint contracts with examples and expected payloads
+- Run the detected tests in CI and track flakiness, duration, and coverage
+- Validate runtime claims in this README against current behavior and deployment configuration
